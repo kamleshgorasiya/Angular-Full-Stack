@@ -21,6 +21,8 @@ export class AuthService {
     const token = localStorage.getItem('token');
     if (token) {
       const decodedUser = this.decodeUserFromToken(token);
+	  console.log(decodedUser);
+	  if(decodedUser)
       this.setCurrentUser(decodedUser);
     }
   }
